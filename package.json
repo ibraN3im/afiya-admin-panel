@@ -8,8 +8,8 @@
     "predev": "npm run generate:icons",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview --host 0.0.0.0 --port ${PORT:-3000}""generate:icons": "node scripts/generate-icons.js",
-    "electron:dev": "concurrently \"npm:dev\" \"wait-on http://localhost:3001 && electron .\"",
+    "preview": "vite preview --host 0.0.0.0 --port ${PORT:-3000}",
+    "generate:icons": "node scripts/generate-icons.js""electron:dev": "concurrently \"npm:dev\" \"wait-on http://localhost:3001 && electron .\"",
     "electron:build": "npm run generate:icons && npm run build && electron-builder --windows portable",
     "electron:pack": "npm run generate:icons && npm run build && electron-packager . \"Afiya Zone Admin Panel\" --platform=win32 --arch=x64 --out=dist_electron/pack --overwrite --icon=assets/icon.ico --prune=true --asar=false",
     "package": "npm run electron:build"
