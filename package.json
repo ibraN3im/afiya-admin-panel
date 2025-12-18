@@ -8,8 +8,7 @@
     "predev": "npm run generate:icons",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "generate:icons": "node scripts/generate-icons.js",
+    "preview": "vite preview --host 0.0.0.0 --port ${PORT:-3000}""generate:icons": "node scripts/generate-icons.js",
     "electron:dev": "concurrently \"npm:dev\" \"wait-on http://localhost:3001 && electron .\"",
     "electron:build": "npm run generate:icons && npm run build && electron-builder --windows portable",
     "electron:pack": "npm run generate:icons && npm run build && electron-packager . \"Afiya Zone Admin Panel\" --platform=win32 --arch=x64 --out=dist_electron/pack --overwrite --icon=assets/icon.ico --prune=true --asar=false",
@@ -33,11 +32,14 @@
     "vite": "^7.2.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.5",
     "concurrently": "^9.2.1",
     "electron": "^39.2.7",
     "electron-builder": "^26.0.12",
     "electron-packager": "^17.1.2",
+    "gensync": "^1.0.0-beta.2",
     "jimp": "^1.6.0",
+    "js-tokens": "^10.0.0",
     "png-to-ico": "^3.0.1",
     "wait-on": "^9.0.3"
   },
