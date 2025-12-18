@@ -11,10 +11,10 @@ export default defineConfig({
         changeOrigin: true,
         secure: false
       }
-    },
-    preview: {
-      allowedHosts: ['afiya-admin-panel.onrender.com']
     }
+  },
+  preview: {
+    allowedHosts: ['afiya-admin-panel.onrender.com']
   },
   build: {
     outDir: 'dist',
