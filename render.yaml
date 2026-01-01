@@ -1,0 +1,23 @@
+# Render service manifest for Afiya Zone Store
+# Defines a static site for frontend and a web service for backend
+
+staticSites:
+  - name: afiya-zone-frontend
+    repo: https://github.com/ibraN3im/Afiya-Zone
+    branch: main
+    buildCommand: npm ci && npm run build
+    publishPath: build
+    # Do not add secrets here; configure them in the Render dashboard
+    # env: []
+
+services:
+  - type: web
+    name: afiya-zone-backend
+    repo: https://github.com/ibraN3im/Afiya-Zone
+    branch: main
+    env: node
+    plan: free
+    path: server
+    buildCommand: cd server && npm ci
+    startCommand: npm start
+    # Set runtime environment in Render dashboard (e.g., NODE_ENV=production)
