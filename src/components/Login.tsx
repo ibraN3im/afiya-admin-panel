@@ -44,7 +44,7 @@ export default function Login({ onLogin }: LoginProps) {
         <div className="admin-logo-cart text-center mb-4">
 
           <img
-            src="https://scontent.fdxb1-1.fna.fbcdn.net/v/t39.30808-1/597829220_25326756927005449_7484898340885741205_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=103&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=6nqeCIXObGgQ7kNvwHS90ED&_nc_oc=Admmt5t36eCZ5J0Gaf2wc025U5ssCU6VdUyfrY1oG8mmTiUu8_h_6Y4Qk-MfEq6z4rc&_nc_zt=24&_nc_ht=scontent.fdxb1-1.fna&_nc_gid=Ku2MYO-kGnSaDxhjtboIyQ&oh=00_Afl9d6JlAYKzS62EUwg446kCAhBaQu5t8Uh6xfxhADmzIw&oe=6949C6AC"
+            src="https://i.imgur.com/HDmpMTk.jpg"
             alt="Afiya Zone Logo"
             className="img-fluid admin-logo"
           />
